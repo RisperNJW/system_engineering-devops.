@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
+# This script lists files in the current directory, showing only the part after the first dash
 for file in *; do
+    # Check if it's a regular file (not a directory) and not hidden
     if [ -f "$file" ]; then
+        # Extract everything after the first dash
         echo "${file#*-}"
     fi
 done
